@@ -1,0 +1,67 @@
+/* =====================================================================================================
+   RoadGuard theme: "Road Hazard & Field Safety"
+   Palette tokens first, then the semantic tokens every component reads. Change the look here only.
+   ===================================================================================================== */
+:root {
+  --page-px: 20px;   /* horizontal gutter shared by the navbar and the page container */
+  /* ---- palette ---- */
+  --hazard-orange: #E65100;        /* primary accent: CTAs, active states, alert indicators */
+  --hazard-orange-dark: #C24400;   /* hover / pressed (5.1:1 with white text) */
+  --hazard-orange-text: #B53F00;   /* orange used AS TEXT on light surfaces (5.7:1; plain #E65100 is only 3.8:1) */
+  --slate-base: #2E403B;           /* deep grayish green: headings, dark buttons, avatar */
+  --slate-muted: #4A5D57;          /* medium grayish green: secondary text, muted icons */
+  --app-bg: #F0F4F1;               /* soft sage page background */
+  --card-bg: #FFFFFF;              /* cards and containers */
+  --border-soft: #D1DDD6;          /* hairline borders */
+  --charcoal: #1C2824;             /* body text */
+  --sage-pill: #E3EAE5;            /* light gray-green hover / pill background */
+
+  /* ---- semantic tokens (light) ---- */
+  --bg: var(--app-bg);
+  --surface: var(--card-bg);
+  --surface-2: var(--sage-pill);
+  --line: var(--border-soft);
+  --line-strong: #8A9E95;          /* form-control borders (3:1 against white) */
+  --ink: var(--charcoal);
+  --text: var(--charcoal);
+  --heading: var(--slate-base);
+  --muted: var(--slate-muted);
+  --tech: var(--slate-base);       /* technical data (mono) */
+  --link: var(--hazard-orange-text);
+  --accent: var(--hazard-orange);
+  --accent-hover: var(--hazard-orange-dark);
+  --on-accent: #FFFFFF;
+  --focus: var(--hazard-orange);
+
+  --pending-bg: #E6EDE8;  --pending-fg: #2E403B;  --pending-bd: #C5D3CB;     /* open / in progress */
+  --critical-bg: #FFF0E6; --critical-fg: #A83A00; --critical-bd: #FFC7A0;    /* high severity: orange family */
+  --resolved-bg: #E1F0E6; --resolved-fg: #1E5A3C; --resolved-bd: #B6D3C1;    /* resolved */
+  --neutral-bg: #EAEFEC;  --neutral-fg: #4A5D57;  --neutral-bd: #D1DDD6;
+  --warn-bg: #FFF6DB;     --warn-fg: #7A5200;     --warn-bd: #F0D58A;
+  --danger: #B3261E;
+  --ok-dot: #2F8F5B;                                                          /* "Live" status dot */
+
+  --nav-bg: rgba(255, 255, 255, .78);
+  --nav-border: rgba(74, 93, 87, .15);
+  --shadow: 0 1px 2px rgba(28, 40, 36, .06), 0 4px 14px rgba(28, 40, 36, .08);
+  --radius: 12px; --radius-sm: 8px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+
+/* Dark variant (Settings > Appearance). Built from the same slate-green base. */
+[data-theme="dark"] {
+  --bg: #111916; --surface: #19231F; --surface-2: #22302B; --line: #2E403B; --line-strong: #5C7068;
+  --ink: #E8F0EB; --text: #D5E0DA; --heading: #E8F0EB; --muted: #9FB3AA; --tech: #BFD6CB; --link: #FF9A5C; --focus: #FF9A5C;
+  --pending-bg: #22302B; --pending-fg: #BCD1C7; --pending-bd: #3A4D46;
+  --critical-bg: #3A1D0C; --critical-fg: #FF9A5C; --critical-bd: #7A3A12;
+  --resolved-bg: #17332A; --resolved-fg: #8FD3A8; --resolved-bd: #2A5A45;
+  --neutral-bg: #22302B; --neutral-fg: #9FB3AA; --neutral-bd: #3A4D46;
+  --warn-bg: #3A2D0C; --warn-fg: #F2C26B; --warn-bd: #6B5314;
+  --danger: #C62828;
+  --nav-bg: rgba(17, 25, 22, .78); --nav-border: rgba(159, 179, 170, .18);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 6px 20px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+@media (max-width: 640px) { :root { --page-px: 12px; } }
