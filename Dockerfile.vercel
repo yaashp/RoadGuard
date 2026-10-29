@@ -16,4 +16,4 @@ COPY --from=build /app/target/roadguard-1.0.0.jar app.jar
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "java -Dserver.port=${PORT:-8080} -jar app.jar"]
+CMD ["sh", "-c", "java -Dserver.port=${PORT:-80} -jar app.jar"]
